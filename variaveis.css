@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('fontes/Lato-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Merriweather-Regular';
+  src: url('fontes/Merriweather-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Merriweather-Bold';
+  src: url('fontes/Merriweather-Bold.ttf');
+}
+
+/*Variáveis*/
+:root {
+  --bgSite: #d7d4ff;
+  --buttonColor: #6c63ff;
+
+  --white: #ffffff;
+  --white300: #f9f9f9;
+
+  --title: #2b2b2b;
+  --text: #555555;
+}
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+input[type='button'] {
+  padding: 0.8em 2.8em;
+  background: var(--buttonColor);
+  color: var(--white);
+  font-family: 'Lato-Regular';
+
+  border-radius: 5px;
+  margin-top: 2em;
+  cursor: pointer;
+  border: 0;
+}
+button:focus,
+input:focus {
+  border: 0;
+}
+
+header {
+  padding: 3em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bgSite);
+}
+
+header > section {
+  height: 250px;
+  font-family: 'Merriweather-Regular';
+}
+
+header > section h2 {
+  margin-bottom: 1em;
+}
+
+header > section p {
+  font-family: 'Lato-Regular';
+  font-size: 1em;
+}
+
+main {
+  padding: 2.8em 0.8em;
+  display: grid;
+  column-gap: 3em;
+}
+
+main .card div {
+  height: 25vh;
+}
+
+main .card {
+  margin: auto;
+  margin-bottom: 3em;
+  background: white;
+  padding-bottom: 1em;
+}
+
+main h3, main p {
+  width: 90%;
+  margin: 1em auto;
+}
+
+main h3 {
+  font-family: 'Merriweather-Regular';
+}
+
+main p {
+  font-family: 'Lato-Regular';
+}
+
+footer {
+  height: 550px;
+  background: var(--bgSite);
+  text-align: center;
+}
+
+footer h2 {
+  font-family: 'Merriweather-Regular';
+  margin-bottom: 0.5em;
+}
+
+footer input {
+  height: 3.5em;
+  padding-left: 1em;
+  border-radius: 5px;
+  border: none;
+  font-family: 'Lato-Regular';
+}
+
+footer textarea {
+  height: 150px;
+  padding: 0.5em;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Lato-Regular';
+}
+
+form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2.8em 0.8em;
+  row-gap: 1em;
+}
+
+.div1 {
+  background: salmon;
+}
+
+.div2 {
+  background: aqua;
+}
+
+.div3 {
+  background: magenta;
+}
+
+.div4 {
+  background: mediumspringgreen;
+}
+
+.div5 {
+  background: peru;
+}
+
+.div6 {
+  background: powderblue;
+}
+
+@media (min-width: 360px) {
+  body {
+    background: var(--title);
+  }
+}
+
+@media (min-width: 720px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3em;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3em;
+  }
+
+  .card {
+    width: 300px;
+  }
+
+  form {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1080px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 4em;
+  }
+
+  form {
+    width: 25%;
+  }
+}
